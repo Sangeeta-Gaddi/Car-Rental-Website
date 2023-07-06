@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <form [formGroup]="bookingForm" (ngSubmit)="submitForm()" class="my-4">
+        <div class="form-group">
+            <label for="carId">Car ID:</label>
+            <input type="text" id="carId" formControlName="carId" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" formControlName="startDate" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" formControlName="endDate" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" formControlName="fullName" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email" required class="form-control">
+            <div class="text-danger"
+                *ngIf="bookingForm.get('email')?.hasError('email') && bookingForm.get('email')?.touched">
+                Invalid email format.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" formControlName="phoneNumber" required class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" formControlName="paymentMethod" required class="form-control">
+                <option value="">Select a payment method</option>
+                <option value="credit_card">Credit Card</option>
+                <option value="debit_card">Debit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="bookingForm.invalid" class="btn-primary">Submit</button>
+    </form>
+</div>

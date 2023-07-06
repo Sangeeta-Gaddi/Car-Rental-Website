@@ -1,0 +1,13 @@
+
+<div class="booking-details" *ngFor="let booking of bookingData">
+    <h2>Booking Details</h2>
+    <p><strong>Car ID:</strong> {{ booking.carId }}</p>
+    <p><strong>Start Date:</strong> {{ booking.startDate | date }}</p>
+    <p><strong>End Date:</strong> {{ booking.endDate | date }}</p>
+    <p><strong>Full Name:</strong> {{ booking.fullName }}</p>
+    <p><strong>Email:</strong> {{ booking.email }}</p>
+    <p><strong>Phone Number:</strong> {{ booking.phoneNumber }}</p>
+    <p class="mb-3"><strong>Payment Method:</strong> {{ booking.paymentMethod }}</p>
+    <button class="btn btn-primary" routerLink="/admin/payment">Confirm Booking</button>
+  </div>
+  

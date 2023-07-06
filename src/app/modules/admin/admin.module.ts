@@ -6,6 +6,11 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { UserComponent } from './components/user/user.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BookingComponent } from './components/booking/booking.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BookingConfirmationComponent } from './components/booking-confirmation/booking-confirmation.component';
+import { PaymentComponent } from './components/payment/payment.component';
+
 
 
 
@@ -14,11 +19,16 @@ import { FooterComponent } from './components/footer/footer.component';
     AdminDashboardComponent,
     UserComponent,
     HeaderComponent,
-    FooterComponent
-  ],
+    FooterComponent,
+    BookingComponent,
+    BookingConfirmationComponent,
+    PaymentComponent,
+   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

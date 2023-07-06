@@ -1,0 +1,7 @@
+<button class="btn btn-primary small-btn ms-4 mt-5 mb-5" (click)="initiatePayment()">Initiate payment</button>
+
+<div class="form-group ms-4">
+    <label class="" for="verify">Enter payment ID</label>
+    <input class="form-control" type="text" #inputValue>
+    <button class="btn-primary small-btn mt-3" (click)="verifyPayment(inputValue.value)">Verify</button>
+</div>
