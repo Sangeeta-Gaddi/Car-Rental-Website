@@ -1,0 +1,48 @@
+<nav class="navbar bg-white">
+    <div class="d-flex">
+      <h2 style="margin-inline: 650px;">Update Car Information</h2>
+      </div>      
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Car ID</label>
+                      <input type="text" [(ngModel)]="car.carid" class="form-control"name="carid" #carid="ngModel"ngModel required placeholder="Enter car id">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Car Name</label>
+                        <input type="text" [(ngModel)]="car.carname" class="form-control"name="carname" #carname="ngModel"ngModel required placeholder="Enter car id">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Car Price</label>
+                        <input type="number" [(ngModel)]="car.carprice" class="form-control"name="carprice" #carprice="ngModel"ngModel required placeholder="Enter car price">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Car Category</label>
+                        <input type="text" [(ngModel)]="car.carcategory" class="form-control"name="carcategory" #carcategory="ngModel"ngModel required placeholder="Enter car category">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Car Url</label>
+                        <input type="text" [(ngModel)]="car.carurl" class="form-control"name="carurl" #carurl="ngModel"ngModel required placeholder="Enter car url">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Car Description</label>
+                        <textarea type="text" [(ngModel)]="car.cardescription" class="form-control"name="cardescription" #cardescription="ngModel"ngModel required placeholder="Enter car description"></textarea>
+                      </div>
+
+                     <div class="buttons">
+                    <button (click)="update()" type="submit" class="btn btn-primary">Update</button>&nbsp;
+                    <button routerLink="/view-product" type="submit" class="btn btn-success">Back</button>
+                    </div>                   
+                  
+            </div>
+        </div>
+    </div>
