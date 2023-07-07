@@ -1,0 +1,17 @@
+a{
+    font-weight: 100;
+    margin-left: 40%;
+    font-size: xx-large;
+    font-variant: normal;
+}
+
+p{
+    font-weight: 300;
+    font-size:larger;
+    font-style: oblique;
+}
+
+img{
+    height: 100%;
+
+}
