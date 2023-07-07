@@ -1,0 +1,35 @@
+<nav class="navbar bg-white">
+    <div class="container-fluid">
+        <a style="color:black; margin-left: 40%; font-size: 30px;">View Car details</a>
+        <button routerLink="/addcar" class="btn btn-success">Back</button>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <table class="table mt-4 table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Car image</th>
+                <th scope="col">Car id</th>
+                <th scope="col">Car name</th>
+                <th scope="col">Car price</th>
+                <th scope="col">Car category</th>
+                <th scope="col">Car desccription</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of car">
+                <td><img style="width:156px; height:95px" src="{{item.carurl}}"></td>
+                <td>{{item.carid}}</td>
+                <td>{{item.carname}}</td>
+                <td>{{item.carprice}}</td>
+                <td>{{item.carcategory}}</td>
+                <td>>{{item.cardescription}}</td>
+                <td><i routerLink="/update-product/{{item.id}}" class="bi bi-pencil-square"></i>&nbsp;
+                     <i (click)="deletecar(item.id)" class="bi bi-trash"></i>
+                  </td>
+            </tr>    
+        </tbody>
+    </table>
+</div>
